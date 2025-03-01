@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-QSHL2B5868"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-QSHL2B5868");
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>あめのみづ鍼灸院</title>
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="apple-touch-icon"
+      type="image/png"
+      href="/apple-touch-icon-180x180.png"
+    />
+    <link rel="icon" type="image/png" href="/icon-192x192.png" />
+    <script src="js/script.js" defer></script>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+
+  <body>
+    <!-- ローディング画面 -->
+    <div id="loading">
+      <img class="spinner" src="images/loading.png" alt="" />
+    </div>
+
+    <!--コンテンツ -->
+
+    <div class="container">
+      <header>
+        <a href="index.html">
+          <img
+            src="images/IMG_6979.jpg"
+            alt="sky"
+            width="100%"
+            height="250px"
+          />
+        </a>
+
+        <nav>
+          <ul>
+            <li><a href="/concept.html">コンセプト</a></li>
+            <li><a href="/reserve.html">予約</a></li>
+            <li><a href="/fee.html">料金</a></li>
+            <br />
+            <li><a href="/access.html">アクセス</a></li>
+            <li><a href="/contact.html">お問い合わせ</a></li>
+            <li><a href="/me.html">私について</a></li>
+            <br />
+            <li><a href="/writing.html">医術日誌</a></li>
+            <li><a href="https://amenomizu.webflow.io">in English</a></li>
+          </ul>
+        </nav>
+        <hr />
+      </header>
+
+      <div id="app">
+        <div class="calendar-container">
+          <h1>２０２５ - 2月</h1>
+          <table class="calendar">
+            <tr>
+              <th>SUN</th>
+              <th>MON</th>
+              <th>TUE</th>
+              <th>WED</th>
+              <th>THU</th>
+              <th>FRI</th>
+              <th>SAT</th>
+            </tr>
+            <tr class="day">
+              <td>26</td>
+              <td>27</td>
+              <td>28</td>
+              <td>29</td>
+              <td>30</td>
+              <td>31</td>
+              <td
+                :class="{selected:selectedDay === 1}"
+                class="circle1"
+                @click="selectedDate(1)"
+              >
+                1
+              </td>
+            </tr>
+            <tr class="day">
+              <td
+                :class="{ selected:selectedDay === 2}"
+                class="circle2"
+                @click="selectedDate(2)"
+              >
+                2
+              </td>
+              <td>3</td>
+              <td>4</td>
+              <td>5</td>
+              <td>6</td>
+              <td>7</td>
+              <td
+                :class="{selected:selectedDay === 8}"
+                class="circle1"
+                @click="selectedDate(8)"
+              >
+                8
+              </td>
+            </tr>
+            <tr class="day">
+              <td
+                :class="{ selected:selectedDay === 9}"
+                class="circle2"
+                @click="selectedDate(9)"
+              >
+                9
+              </td>
+              <td>10</td>
+              <td
+                :class="{ selected:selectedDay === 11}"
+                class="circle2"
+                @click="selectedDate(11)"
+              >
+                11
+              </td>
+              <td
+                :class="{selected:selectedDay === 12}"
+                class="circle1"
+                @click="selectedDate(12)"
+              >
+                12
+              </td>
+              <td>13</td>
+              <td>14</td>
+              <td
+                :class="{selected:selectedDay === 15}"
+                class="circle1"
+                @click="selectedDate(15)"
+              >
+                15
+              </td>
+            </tr>
+            <tr class="day">
+              <td
+                :class="{ selected:selectedDay === 16}"
+                class="circle2"
+                @click="selectedDate(16)"
+              >
+                16
+              </td>
+              <td
+                :class="{	selected:selectedDay === 17}"
+                class="circle1"
+                @click="selectedDate(17)"
+              >
+                17
+              </td>
+              <td
+                :class="{	selected:selectedDay === 18}"
+                class="circle1"
+                @click="selectedDate(18)"
+              >
+                18
+              </td>
+              <td>19</td>
+              <td>20</td>
+              <td>21</td>
+              <td>22</td>
+            </tr>
+            <tr class="day">
+              <td
+                :class="{ selected:selectedDay === 23}"
+                class="circle2"
+                @click="selectedDate(23)"
+              >
+                23
+              </td>
+              <td>24</td>
+              <td>25</td>
+              <td
+                :class="{selected:selectedDay === 26}"
+                class="circle1"
+                @click="selectedDate(26)"
+              >
+                26
+              </td>
+              <td
+                :class="{ selected:selectedDay === 27}"
+                class="circle2"
+                @click="selectedDate(27)"
+              >
+                27
+              </td>
+              <td
+                :class="{selected:selectedDay === 28}"
+                class="circle1"
+                @click="selectedDate(28)"
+              >
+                28
+              </td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="timebox-container">
+          <!-- 時刻が選択されると表示される -->
+          <div v-if="selectedTimes.length > 0">
+            <div
+              class="timebox"
+              v-for="time in selectedTimes"
+              :key="time"
+              @click="selectTime(time)"
+            >
+              <p>{{time}}</p>
+            </div>
+          </div>
+          <div v-else>
+            <p>※カレンダーから日付を選択してください</p>
+          </div>
+        </div>
+        <br /><br />
+
+        <!-- 時刻が選ばれた後に表示されるconfirmセクション -->
+        <!-- <div class = "confirm" v-if="selectedTime">
+      予約日時は<br>
+      <P>{{ message }}<br>{{selectedTime}}</P><br>
+      で、よろしいですか？<br><br>
+      <button>確認画面へ</button><br>
+    </div> -->
+      </div>
+    </div>
+
+    <style>
+        /* 追加: bodyをflexで中央寄せ
+      body {
+        display: flex;
+        justify-content: center; /* 横方向の中央寄せ */
+        align-items: center;     /* 縦方向の中央寄せ */
+        height: 100vh;           /* 親要素の高さを100%に設定 */
+        margin: 0;               /* デフォルトの余白を取り除く */
+      } */
+
+
+      .calendar-container {
+          /* width: 500px; */
+          margin: 0 auto;
+          border-radius: 5px;
+          color: #1a1a1a;
+          display:flex;
+          flex-direction: column;
+          align-items: center;
+          padding:20px;
+        }
+
+        h1 {
+          height: 80px;
+          line-height: 80px;
+          text-align: center;
+          font-size: 24px;
+          margin: 0;
+        }
+        .calendar {
+          padding: 0 30px 30px 30px;
+        }
+        table {
+          width: 100%;
+        }
+        th, td {
+          text-align: center;
+          padding: 10px;
+        }
+        th {
+          font-weight: normal;
+          font-size: 14px;
+        }
+        td {
+          font-weight: bold;
+        }
+        .day *:first-child {
+          color: #ff838b;
+        }
+        .day *:last-child {
+          color: #6fb5ff;
+        }
+
+        .confirm{
+          text-align: center;
+        }
+
+        .button{
+          width:25px;
+          box-shadow: 2px 2px 5px gray;
+        }
+
+        .circle1{
+          background:rgba(53, 204, 255, 0.903);
+          border-radius: 50%;
+          width: 25px;
+          box-shadow: 2px 2px 5px gray;
+        }
+
+        .circle2{
+          background:rgba(169, 202, 255, 0.963);
+          border-radius: 50%;
+          width: 25px;
+            box-shadow: 2px 2px 5px gray;
+          }
+
+          .selectedDay{
+            border-bottom: #ff6f6f;
+          }
+
+          .timebox-container{
+            display: flex; /* 横並びにする */
+            flex-wrap: wrap; /* 必要なら折り返しを有効にする */
+            gap: 10px; /*アイテム間のスペースを設定　*/
+            justify-content: center; 中央寄せ（必要に応じて変更）
+            width:100%;
+            margin-top: 20px;
+          }
+
+
+          .timebox{
+            flex: 1 1 120px;
+            max-width:120px;
+            margin:0px 10px;
+            text-align:center;
+            color:#fff;
+            background-color: #73b5fc;
+            border-bottom: solid 6px #3f87ce;
+            box-shadow: 3px 4px 2px rgba(0, 0, 0, 0.25);
+            border-radius: 20px;
+            cursor: pointer;
+            padding: 10px;
+            display:inline-block;
+          }
+    </style>
+
+    <script>
+      Vue.createApp({
+        data() {
+          return {
+            selectedDay: null, //選択された日付
+            selectedTime: "", //選択された時刻
+            times: {
+              2: ["予約可能な時間枠はなくなりました"],
+              9: ["予約可能な時間枠はなくなりました"],
+              11: ["予約可能な時間枠はなくなりました"],
+              16: ["予約可能な時間枠はなくなりました"],
+              23: ["12:00", "14:00", "16:00"],
+              27: ["8:00", "10:00", "12:00", "14:00"],
+
+              1: ["予約可能な時間枠はなくなりました"],
+              8: ["予約可能な時間枠はなくなりました"],
+              12: ["予約可能な時間枠はなくなりました"],
+              15: ["予約可能な時間枠はなくなりました"],
+              17: ["予約可能な時間枠はなくなりました"],
+              18: ["予約可能な時間枠はなくなりました"],
+              26: ["19:00"],
+              28: ["予約可能な時間枠はなくなりました"],
+            },
+            selectedTimes: [],
+            message: "", //メッセージ
+          };
+        },
+
+        methods: {
+          // 予約可能日をクリック時に、その日時を表示
+          selectedDate(day) {
+            this.selectedDay = day;
+            this.selectedTimes = this.times[day] || []; //該当する時間を設定。
+            this.selectedTime = ""; //時刻をリセット
+            this.message = `１月${day}日`; //メッセージを設定
+          },
+
+          //時刻をクリックした時の処理
+          selectTime(time) {
+            this.selectedTime = time; //時刻を選択
+          },
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>
