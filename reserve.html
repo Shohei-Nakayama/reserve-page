@@ -87,13 +87,7 @@
               <td></td>
               <td></td>
               <td></td>
-              <td
-                :class="{selected:selectedDay === 1}"
-                class="circle1"
-                @click="selectedDate(1)"
-              >
-                1
-              </td>
+              <td>1</td>
             </tr>
 
             <tr class="day">
@@ -125,13 +119,7 @@
               >
                 5
               </td>
-              <td
-                :class="{selected:selectedDay === 6}"
-                class="circle1"
-                @click="selectedDate(6)"
-              >
-                6
-              </td>
+              <td>6</td>
               <td
                 :class="{selected:selectedDay === 7}"
                 class="circle1"
@@ -234,20 +222,8 @@
               >
                 20
               </td>
-              <td
-                :class="{selected:selectedDay === 21}"
-                class="circle1"
-                @click="selectedDate(21)"
-              >
-                21
-              </td>
-              <td
-                :class="{selected:selectedDay === 22}"
-                class="circle1"
-                @click="selectedDate(22)"
-              >
-                22
-              </td>
+              <td>21</td>
+              <td>22</td>
             </tr>
             <tr class="day">
               <td
@@ -348,101 +324,97 @@
     </div>
 
     <style>
-
-
       .calendar-container {
-          /* width: 500px; */
-          margin: 0 auto;
-          border-radius: 5px;
-          color: #1a1a1a;
-          display:flex;
-          flex-direction: column;
-          align-items: center;
-          padding:20px;
-        }
+        margin: 0 auto;
+        border-radius: 5px;
+        color: #1a1a1a;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+      }
 
-        h1 {
-          height: 80px;
-          line-height: 80px;
-          text-align: center;
-          font-size: 24px;
-          margin: 0;
-        }
-        .calendar {
-          padding: 0 30px 30px 30px;
-        }
-        table {
-          width: 100%;
-        }
-        th, td {
-          text-align: center;
-          padding: 10px;
-        }
-        th {
-          font-weight: normal;
-          font-size: 14px;
-        }
-        td {
-          font-weight: bold;
-        }
-        .day *:first-child {
-          color: #ff838b;
-        }
-        .day *:last-child {
-          color: #6fb5ff;
-        }
+      h1 {
+        height: 80px;
+        line-height: 80px;
+        text-align: center;
+        font-size: 24px;
+        margin: 0;
+      }
+      .calendar {
+        padding: 0 30px 30px 30px;
+      }
+      table {
+        /* width: 70%; */
+      }
+      th,
+      td {
+        text-align: center;
+        padding: 10px;
+      }
+      th {
+        font-weight: normal;
+        font-size: 14px;
+      }
+      .day *:first-child {
+        color: #ff838b;
+      }
+      .day *:last-child {
+        color: #002065;
+      }
 
-        .confirm{
-          text-align: center;
-        }
+      .confirm {
+        text-align: center;
+      }
 
-        .button{
-          width:25px;
-          box-shadow: 2px 2px 5px gray;
-        }
+      .button {
+        width: 25px;
+        box-shadow: 2px 2px 5px gray;
+      }
 
-        .circle1{
-          background:rgba(53, 204, 255, 0.903);
-          border-radius: 50%;
-          width: 25px;
-          box-shadow: 2px 2px 5px gray;
-        }
+      .circle1 {
+        background: rgba(53, 204, 255, 0.903);
+        border-radius: 50%;
+        width: 15px;
+        height: 15px;
+        box-shadow: 2px 2px 5px gray;
+        flex-shrink: 0;
+      }
 
-        .circle2{
-          background:rgba(169, 202, 255, 0.963);
-          border-radius: 50%;
-          width: 25px;
-            box-shadow: 2px 2px 5px gray;
-          }
+      .circle2 {
+        background: rgba(169, 202, 255, 0.963);
+        border-radius: 50%;
+        width: 25px;
+        box-shadow: 2px 2px 5px gray;
+      }
 
-          .selectedDay{
-            border-bottom: #ff6f6f;
-          }
+      .selectedDay {
+        border-bottom: #ff6f6f;
+      }
 
-          .timebox-container{
-            display: flex; /* 横並びにする */
-            flex-wrap: wrap; /* 必要なら折り返しを有効にする */
-            gap: 10px; /*アイテム間のスペースを設定　*/
-            justify-content: center; 中央寄せ（必要に応じて変更）
-            width: 100%;
-            margin-top: 20px;
-          }
+      .timebox-container {
+        display: flex; /* 横並びにする */
+        flex-wrap: wrap; /* 必要なら折り返しを有効にする */
+        gap: 10px; /*アイテム間のスペースを設定　*/
+        justify-content: center; /*中央寄せ 必要に応じて変更） */
+        width: 100%;
+        margin-top: 20px;
+      }
 
-
-          .timebox{
-            flex: 1 1 120px;
-            max-width:120px;
-            margin:0px 10px;
-            text-align:center;
-            color:#fff;
-            background-color: #73b5fc;
-            border-bottom: solid 6px #3f87ce;
-            box-shadow: 3px 4px 2px rgba(0, 0, 0, 0.25);
-            border-radius: 20px;
-            cursor: pointer;
-            padding: 10px;
-            display:inline-block;
-          }
+      .timebox {
+        flex: 1 1 120px;
+        max-width: 120px;
+        margin: 0px 10px;
+        text-align: center;
+        color: #fff;
+        background-color: #73b5fc;
+        border-bottom: solid 6px #3f87ce;
+        box-shadow: 3px 4px 2px rgba(0, 0, 0, 0.25);
+        border-radius: 20px;
+        cursor: pointer;
+        padding: 10px;
+        display: inline-block;
+      }
     </style>
 
     <script>
@@ -453,12 +425,12 @@
             selectedTime: "", //選択された時刻
             times: {
               // 全日同じ時間枠に設定
-              1: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
-              2: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
+              1: ["予約可能な時間枠はなくなりました"],
+              2: ["12:00", "14:00", "16:00", "18:00"],
               3: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
               4: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
               5: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
-              6: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
+              // 6: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
               7: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
               8: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
               9: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
@@ -467,20 +439,20 @@
               12: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
               13: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
               14: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
-              15: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
+              15: ["8:00", "10:00", "16:00", "18:00"],
               16: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
               17: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
               18: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
               19: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
               20: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
-              21: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
-              22: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
+              // 21: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
+              // 22: ["予約可能な時間枠はなくなりました"],
               23: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
-              24: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
-              25: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
-              26: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
-              27: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
-              28: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
+              24: ["予約可能な時間枠はなくなりました"],
+              25: ["16:00", "18:00"],
+              26: ["予約可能な時間枠はなくなりました"],
+              27: ["16:00", "18:00"],
+              28: ["16:00", "18:00"],
               29: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
               30: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
               31: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
