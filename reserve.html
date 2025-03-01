@@ -69,7 +69,7 @@
 
       <div id="app">
         <div class="calendar-container">
-          <h1>２０２５ - 2月</h1>
+          <h1>２０２５ - 3月</h1>
           <table class="calendar">
             <tr>
               <th>SUN</th>
@@ -81,12 +81,12 @@
               <th>SAT</th>
             </tr>
             <tr class="day">
-              <td>26</td>
-              <td>27</td>
-              <td>28</td>
-              <td>29</td>
-              <td>30</td>
-              <td>31</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
               <td
                 :class="{selected:selectedDay === 1}"
                 class="circle1"
@@ -95,19 +95,50 @@
                 1
               </td>
             </tr>
+
             <tr class="day">
               <td
-                :class="{ selected:selectedDay === 2}"
-                class="circle2"
+                :class="{selected:selectedDay === 2}"
+                class="circle1"
                 @click="selectedDate(2)"
               >
                 2
               </td>
-              <td>3</td>
-              <td>4</td>
-              <td>5</td>
-              <td>6</td>
-              <td>7</td>
+              <td
+                :class="{selected:selectedDay === 3}"
+                class="circle1"
+                @click="selectedDate(3)"
+              >
+                3
+              </td>
+              <td
+                :class="{selected:selectedDay === 4}"
+                class="circle1"
+                @click="selectedDate(4)"
+              >
+                4
+              </td>
+              <td
+                :class="{selected:selectedDay === 5}"
+                class="circle1"
+                @click="selectedDate(5)"
+              >
+                5
+              </td>
+              <td
+                :class="{selected:selectedDay === 6}"
+                class="circle1"
+                @click="selectedDate(6)"
+              >
+                6
+              </td>
+              <td
+                :class="{selected:selectedDay === 7}"
+                class="circle1"
+                @click="selectedDate(7)"
+              >
+                7
+              </td>
               <td
                 :class="{selected:selectedDay === 8}"
                 class="circle1"
@@ -118,16 +149,22 @@
             </tr>
             <tr class="day">
               <td
-                :class="{ selected:selectedDay === 9}"
-                class="circle2"
+                :class="{selected:selectedDay === 9}"
+                class="circle1"
                 @click="selectedDate(9)"
               >
                 9
               </td>
-              <td>10</td>
               <td
-                :class="{ selected:selectedDay === 11}"
-                class="circle2"
+                :class="{selected:selectedDay === 10}"
+                class="circle1"
+                @click="selectedDate(10)"
+              >
+                10
+              </td>
+              <td
+                :class="{selected:selectedDay === 11}"
+                class="circle1"
                 @click="selectedDate(11)"
               >
                 11
@@ -139,8 +176,20 @@
               >
                 12
               </td>
-              <td>13</td>
-              <td>14</td>
+              <td
+                :class="{selected:selectedDay === 13}"
+                class="circle1"
+                @click="selectedDate(13)"
+              >
+                13
+              </td>
+              <td
+                :class="{selected:selectedDay === 14}"
+                class="circle1"
+                @click="selectedDate(14)"
+              >
+                14
+              </td>
               <td
                 :class="{selected:selectedDay === 15}"
                 class="circle1"
@@ -151,41 +200,77 @@
             </tr>
             <tr class="day">
               <td
-                :class="{ selected:selectedDay === 16}"
-                class="circle2"
+                :class="{selected:selectedDay === 16}"
+                class="circle1"
                 @click="selectedDate(16)"
               >
                 16
               </td>
               <td
-                :class="{	selected:selectedDay === 17}"
+                :class="{selected:selectedDay === 17}"
                 class="circle1"
                 @click="selectedDate(17)"
               >
                 17
               </td>
               <td
-                :class="{	selected:selectedDay === 18}"
+                :class="{selected:selectedDay === 18}"
                 class="circle1"
                 @click="selectedDate(18)"
               >
                 18
               </td>
-              <td>19</td>
-              <td>20</td>
-              <td>21</td>
-              <td>22</td>
+              <td
+                :class="{selected:selectedDay === 19}"
+                class="circle1"
+                @click="selectedDate(19)"
+              >
+                19
+              </td>
+              <td
+                :class="{selected:selectedDay === 20}"
+                class="circle1"
+                @click="selectedDate(20)"
+              >
+                20
+              </td>
+              <td
+                :class="{selected:selectedDay === 21}"
+                class="circle1"
+                @click="selectedDate(21)"
+              >
+                21
+              </td>
+              <td
+                :class="{selected:selectedDay === 22}"
+                class="circle1"
+                @click="selectedDate(22)"
+              >
+                22
+              </td>
             </tr>
             <tr class="day">
               <td
-                :class="{ selected:selectedDay === 23}"
-                class="circle2"
+                :class="{selected:selectedDay === 23}"
+                class="circle1"
                 @click="selectedDate(23)"
               >
                 23
               </td>
-              <td>24</td>
-              <td>25</td>
+              <td
+                :class="{selected:selectedDay === 24}"
+                class="circle1"
+                @click="selectedDate(24)"
+              >
+                24
+              </td>
+              <td
+                :class="{selected:selectedDay === 25}"
+                class="circle1"
+                @click="selectedDate(25)"
+              >
+                25
+              </td>
               <td
                 :class="{selected:selectedDay === 26}"
                 class="circle1"
@@ -194,8 +279,8 @@
                 26
               </td>
               <td
-                :class="{ selected:selectedDay === 27}"
-                class="circle2"
+                :class="{selected:selectedDay === 27}"
+                class="circle1"
                 @click="selectedDate(27)"
               >
                 27
@@ -207,7 +292,29 @@
               >
                 28
               </td>
-              <td></td>
+              <td
+                :class="{selected:selectedDay === 29}"
+                class="circle1"
+                @click="selectedDate(29)"
+              >
+                29
+              </td>
+            </tr>
+            <tr class="day">
+              <td
+                :class="{selected:selectedDay === 30}"
+                class="circle1"
+                @click="selectedDate(30)"
+              >
+                30
+              </td>
+              <td
+                :class="{selected:selectedDay === 31}"
+                class="circle1"
+                @click="selectedDate(31)"
+              >
+                31
+              </td>
             </tr>
           </table>
         </div>
@@ -241,14 +348,6 @@
     </div>
 
     <style>
-        /* 追加: bodyをflexで中央寄せ
-      body {
-        display: flex;
-        justify-content: center; /* 横方向の中央寄せ */
-        align-items: center;     /* 縦方向の中央寄せ */
-        height: 100vh;           /* 親要素の高さを100%に設定 */
-        margin: 0;               /* デフォルトの余白を取り除く */
-      } */
 
 
       .calendar-container {
@@ -325,7 +424,7 @@
             flex-wrap: wrap; /* 必要なら折り返しを有効にする */
             gap: 10px; /*アイテム間のスペースを設定　*/
             justify-content: center; 中央寄せ（必要に応じて変更）
-            width:100%;
+            width: 100%;
             margin-top: 20px;
           }
 
@@ -353,21 +452,38 @@
             selectedDay: null, //選択された日付
             selectedTime: "", //選択された時刻
             times: {
-              2: ["予約可能な時間枠はなくなりました"],
-              9: ["予約可能な時間枠はなくなりました"],
-              11: ["予約可能な時間枠はなくなりました"],
-              16: ["予約可能な時間枠はなくなりました"],
-              23: ["12:00", "14:00", "16:00"],
-              27: ["8:00", "10:00", "12:00", "14:00"],
-
-              1: ["予約可能な時間枠はなくなりました"],
-              8: ["予約可能な時間枠はなくなりました"],
-              12: ["予約可能な時間枠はなくなりました"],
-              15: ["予約可能な時間枠はなくなりました"],
-              17: ["予約可能な時間枠はなくなりました"],
-              18: ["予約可能な時間枠はなくなりました"],
-              26: ["19:00"],
-              28: ["予約可能な時間枠はなくなりました"],
+              // 全日同じ時間枠に設定
+              1: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
+              2: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
+              3: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
+              4: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
+              5: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
+              6: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
+              7: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
+              8: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
+              9: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
+              10: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
+              11: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
+              12: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
+              13: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
+              14: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
+              15: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
+              16: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
+              17: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
+              18: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
+              19: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
+              20: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
+              21: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
+              22: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
+              23: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
+              24: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
+              25: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
+              26: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
+              27: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
+              28: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
+              29: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
+              30: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
+              31: ["8:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
             },
             selectedTimes: [],
             message: "", //メッセージ
@@ -380,7 +496,7 @@
             this.selectedDay = day;
             this.selectedTimes = this.times[day] || []; //該当する時間を設定。
             this.selectedTime = ""; //時刻をリセット
-            this.message = `１月${day}日`; //メッセージを設定
+            this.message = `3月${day}日`; //メッセージを設定
           },
 
           //時刻をクリックした時の処理
